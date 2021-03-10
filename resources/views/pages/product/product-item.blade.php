@@ -7,6 +7,7 @@
         @include('layouts.h-navbar2')
         <div class="row m-0 d-flex align-items-start">
             @include('pages.components.j-product-item')
+            @include('pages.components.j-product-desc')
         </div>
     </div>
 @endsection

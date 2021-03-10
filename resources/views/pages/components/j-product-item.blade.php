@@ -36,7 +36,7 @@
                             <span class="display-4 text-success">@lang('words.coin') {{ number_format($product->promotion_price,2) }}</span>
                         </div>
                     </div>
-                    <div class="row m-0">
+                    <div class="row m-0 p-3">
                         <div class="col">
                             <button class="btn btn-secondary btn-lg btn-block">@lang('words.add-cart')</button>
                         </div>
@@ -45,7 +45,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer"></div>
+                <div class="card-footer">
+                    <div class="row m-0 p-3">
+                        <div class="col text-white">
+                            <span>@lang('words.payment')</span>
+                        </div>
+                    </div>
+                    <div class="row m-0 p-3 text-secondary">
+                        <div class="col">
+                            <i class="fas fa-barcode fa-2x"></i>
+                        </div>
+                        <div class="col">
+                            <i class="fab fa-cc-visa fa-2x"></i>
+                        </div>
+                        <div class="col">
+                            <i class="fab fa-cc-mastercard fa-2x"></i>
+                        </div>
+                        <div class="col">
+                            <i class="fab fa-cc-paypal fa-2x"></i>
+                        </div>
+                        <div class="col">
+                            <i class="fab fa-google-pay fa-2x"></i>
+                        </div>
+                        <div class="col">
+                            <i class="fab fa-cc-apple-pay fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

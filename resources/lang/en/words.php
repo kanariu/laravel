@@ -35,6 +35,8 @@ return [
     'zipcode' => 'Zipcode',
     'state' => 'State',
     'choose' => 'Choose...',
+    'payment' => 'Payment Methods',
+    'desc' => 'DESCRIPTION',
 
     'page-title' => 'Skull Tech - The Best Components',
     'hello' => 'Hi, ',
