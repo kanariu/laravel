@@ -1,0 +1,77 @@
+body {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: url('../../public/images/bodybg.png');
+    background-repeat: no-repeat;
+    background-color: #1b1b1b;
+    background-size: 100% auto;
+}
+
+.bg-op-dark{
+    background-color: rgba($color: #343a40, $alpha: 0.5);
+}
+
+.op-75{
+    opacity: 0.75!important;
+}
+
+.op-50{
+    opacity: 0.50!important;
+}
+
+.op-25{
+    opacity: 0.25!important;
+}
+
+.op-0{
+    opacity: 0!important;
+}
+
+.text-violet{
+    color: #49245e!important;
+}
+
+.text-cyan{
+    color: #57cfc3!important;
+}
+
+.jb-promo{
+    background-color: #8959f7;
+}
+
+.jb-promo .h5{
+    color: white!important;
+}
+
+.jb-high .card{
+    background-color: #ffffff;
+}
+
+.jb-promo .card-title{
+    color: #4843ac;
+}
+
+.jb-high{
+    background-color: #454545;
+}
+
+.jb-high .h5{
+    color: white!important;
+}
+
+.jb-high .card{
+    background-color: #1b1b1b;
+}
+
+.jb-high .card-title{
+    color: #ffffff;
+}
