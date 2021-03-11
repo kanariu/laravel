@@ -14,9 +14,9 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     @lang('words.cases')
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">@lang('words.case-midtower')</a>
-                  <a class="dropdown-item" href="#">@lang('words.case-fulltower')</a>
+                <div class="dropdown-menu disabled" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item disabled" href="#">@lang('words.case-midtower')</a>
+                  <a class="dropdown-item disabled" href="#">@lang('words.case-fulltower')</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -24,9 +24,9 @@
                     @lang('words.motherboards')
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">@lang('words.mb-miniATX')</a>
-                  <a class="dropdown-item" href="#">@lang('words.mb-microATX')</a>
-                  <a class="dropdown-item" href="#">@lang('words.mb-ATX')</a>
+                  <a class="dropdown-item disabled" href="#">@lang('words.mb-miniATX')</a>
+                  <a class="dropdown-item disabled" href="#">@lang('words.mb-microATX')</a>
+                  <a class="dropdown-item disabled" href="#">@lang('words.mb-ATX')</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -34,8 +34,8 @@
                     @lang('words.processors')
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">@lang('words.proc-intel')</a>
-                  <a class="dropdown-item" href="#">@lang('words.proc-amd')</a>
+                  <a class="dropdown-item disabled" href="#">@lang('words.proc-intel')</a>
+                  <a class="dropdown-item disabled" href="#">@lang('words.proc-amd')</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -43,8 +43,8 @@
                     @lang('words.memorys')
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">@lang('words.mem-ddr3')</a>
-                  <a class="dropdown-item" href="#">@lang('words.mem-ddr4')</a>
+                  <a class="dropdown-item disabled" href="#">@lang('words.mem-ddr3')</a>
+                  <a class="dropdown-item disabled" href="#">@lang('words.mem-ddr4')</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -52,8 +52,8 @@
                     @lang('words.gpus')
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">@lang('words.gpu-nvidia')</a>
-                  <a class="dropdown-item" href="#">@lang('words.gpu-amd')</a>
+                  <a class="dropdown-item disabled" href="#">@lang('words.gpu-nvidia')</a>
+                  <a class="dropdown-item disabled" href="#">@lang('words.gpu-amd')</a>
                 </div>
             </li>
           </ul>

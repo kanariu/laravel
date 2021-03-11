@@ -6,7 +6,7 @@
                 <li class="list-group-item">
                     <div class="d-flex flex-column">
                         @foreach ($menu_cases as $case)
-                            <a href="#" class="btn btn-link text-left">{{ $case->name }}</a>
+                            <a href="#" class="btn btn-link text-left disabled">{{ $case->name }}</a>
                         @endforeach
                     </div>
                 </li>
@@ -14,7 +14,7 @@
                 <li class="list-group-item">
                     <div class="d-flex flex-column">
                         @foreach ($menu_mbs as $mb)
-                            <a href="#" class="btn btn-link text-left">{{ $mb->name }}</a>
+                            <a href="#" class="btn btn-link text-left disabled">{{ $mb->name }}</a>
                         @endforeach
                     </div>
                 </li>
