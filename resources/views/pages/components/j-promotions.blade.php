@@ -22,8 +22,13 @@
                 </div>
                 <div class="card-footer">
                   <div>
-                    <p class="h6 text-muted w-100"><small>@lang('words.from') @lang('words.coin') {{ number_format($promotion->price, 2) }} @lang('words.to')</small></p>
-                    <p class="h2 text-violet w-100">@lang('words.coin') {{ number_format($promotion->promotion_price, 2) }}</small></p>
+                    @if (date($today) >= date($promotion->expire_promotion))
+                      <p class="h6 text-muted w-100"><small>@lang('words.from') @lang('words.coin') {{ number_format($promotion->price, 2) }} @lang('words.to')</small></p>
+                      <p class="h2 text-danger w-100">@lang('words.expired')</small></p>
+                    @else
+                      <p class="h6 text-muted w-100"><small>@lang('words.from') @lang('words.coin') {{ number_format($promotion->price, 2) }} @lang('words.to')</small></p>
+                      <p class="h2 text-violet w-100">@lang('words.coin') {{ number_format($promotion->promotion_price, 2) }}</small></p>
+                    @endif
                   </div>
                 </div>
                 <div class="card-footer">

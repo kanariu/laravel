@@ -12,7 +12,7 @@
     <hr class="mb-4 mt-0">
     <div class="row d-flex align-items-stretch">
         <div class="col-md-6">
-            <img src="{{ $product->img_link }}" alt="" class="img-fluid p-4" width="500" height="500">
+            <img src="{{ asset('products/' . $product->img_link . '.png') }}" alt="" class="img-fluid p-4" width="500" height="500">
         </div>
         <div class="col-md-6">
             <div class="card bg-dark">

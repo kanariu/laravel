@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use DB;
 use Session;
 use App\Models\Utils\Product;
+use Carbon\Carbon;
 
 class IndexController extends Controller
 {    
@@ -31,6 +32,8 @@ class IndexController extends Controller
         $highlights = Product::where('highlight', 'S')->limit(6)->get();
         $m_categories_case = DB::table('tech_categories')->where('type', 'case')->where('active', 'S')->orderBy('name','ASC')->limit(10)->get();
         $m_categories_mbs = DB::table('tech_categories')->where('type', 'motherboard')->where('active', 'S')->orderBy('name','ASC')->limit(5)->get();
+        $today = Carbon::now();
+
         return view('pages.index.home', array (
                                                     'promotions' => $promotions,
                                                     'locale' => $defaultLocale,
@@ -42,6 +45,7 @@ class IndexController extends Controller
                                                     'name' => $name,
                                                     'username' => $username,
                                                     'email' => $email,
+                                                    'today' => $today,
                                                 ));
     }
 }
