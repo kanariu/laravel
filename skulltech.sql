@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 10-Mar-2021 às 21:28
+-- Tempo de geração: 11-Mar-2021 às 20:32
 -- Versão do servidor: 10.4.13-MariaDB
 -- versão do PHP: 7.4.7
 
@@ -63,15 +63,14 @@ INSERT INTO `tech_categories` (`id`, `name`, `type`, `active`) VALUES
 
 CREATE TABLE `tech_produtos` (
   `id` int(11) NOT NULL,
-  `name_pt` varchar(40) NOT NULL,
-  `name_en` varchar(40) NOT NULL,
+  `name_pt` varchar(80) NOT NULL,
+  `name_en` varchar(80) NOT NULL,
   `img_link` varchar(500) NOT NULL,
   `description` longtext NOT NULL,
   `price` float NOT NULL,
-  `spec_link` varchar(500) NOT NULL,
   `type` varchar(30) NOT NULL,
   `promotion_price` float NOT NULL,
-  `expire_promotion` timestamp NULL DEFAULT NULL,
+  `expire_promotion` datetime DEFAULT NULL,
   `promotion` varchar(1) NOT NULL DEFAULT 'N',
   `highlight` varchar(1) NOT NULL DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -80,12 +79,16 @@ CREATE TABLE `tech_produtos` (
 -- Extraindo dados da tabela `tech_produtos`
 --
 
-INSERT INTO `tech_produtos` (`id`, `name_pt`, `name_en`, `img_link`, `description`, `price`, `spec_link`, `type`, `promotion_price`, `expire_promotion`, `promotion`, `highlight`) VALUES
-(1, 'PLACA MÃE AORUS B360M GAMING 3', 'MOTHERBOARD AORUS B360M GAMING 3', 'https://static.gigabyte.com/StaticFile/Image/Global/6c5c1c073fcc1711bab0f0c0fe6333be/Product/21259/png/500', '• Supports 9th and 8th Gen Intel® Core™ Processors \\n• Dual Channel Non-ECC Unbuffered DDR4 \\n• New Hybrid Digital PWM Design \\n• Intel® CNVi 802.11ac Wave2 2T2R WIFI Upgradable \\n• High Quality Audio Capacitors and Audio Noise Guard with LED Trace Path Lighting \\n• Dual Ultra-Fast M.2 with PCIe Gen3 X4/X2 & SATA interface \\n• RGB FUSION 2.0 with Digital LED Light Show design \\n• Intel® Native USB 3.1 Gen2 USB Type-A \\n• Intel® GbE LAN with cFosSpeed Internet Accelerator Software \\n• CEC 2019 Ready, Save the Power as Easy as One Click \\n• Smart Fan 5 features Multiple Temperature Sensors and Hybrid Fan Headers with FAN STOP \\n• Anti-Sulfur Resistors Design \\n• Ultra DurableTM 25KV ESD and 15KV Surge LAN Protection \\n• Intel® Optane™ Memory Ready', 899, 'https://www.gigabyte.com/Motherboard/B360M-AORUS-GAMING-3-rev-10/sp#sp', 'motherboard', 729, '2021-03-16 18:38:59', 'S', 'N'),
-(2, 'PROCESSADOR INTEL I9 9900K 9ª GERAÇÃO', 'PROCESSOR INTEL I9 9900K 9ª GEN', 'https://imaginecomputerbd.com/wp-content/uploads/2020/03/core-i9-unlocked-box-1x1.png.rendition.intel_.web_.550.550.png', '', 3099.9, 'https://www.intel.com.br/content/www/br/pt/products/processors/core/i9-processors/i9-9900k.html', 'processor', 2799, '2021-03-10 18:38:59', 'S', 'N'),
-(3, 'XPG SPECTRIX D60G RGB (2x8GB) 3200MHZ', 'XPG SPECTRIX D60G RGB (2x8GB) 3200MHZ', 'https://24.lv/images/detailed/464/productGallery38_qfzo-ic.png', '', 899, 'https://www.xpg.com/en/feature/606/', 'memory', 749, '2021-03-10 18:38:59', 'S', 'N'),
-(4, 'EVGA NVIDIA GEFORCE RTX 3080', 'EVGA NVIDIA GEFORCE RTX 3080', 'https://images.evga.com/products/gallery/png/10G-P5-3897-KR_XL_1.png', '', 12499.9, 'https://br.evga.com/products/product.aspx?pn=10G-P5-3895-KR', 'gpu', 10499.9, '2021-03-10 18:38:59', 'S', 'N'),
-(5, 'HEADSET GAMER RAZER BLACK SHARK V2 7.1', 'HEADSET GAMER RAZER BLACK SHARK V2 7.1', 'https://banleong.com/BLT/wp-content/uploads/2020/08/Razer-BlackShark-V2-Render-2020-v03.png', '', 799.9, '', 'headset', 0, '2021-03-10 18:38:59', 'N', 'S');
+INSERT INTO `tech_produtos` (`id`, `name_pt`, `name_en`, `img_link`, `description`, `price`, `type`, `promotion_price`, `expire_promotion`, `promotion`, `highlight`) VALUES
+(1, 'PLACA MÃE AORUS B360M GAMING 3', 'MOTHERBOARD AORUS B360M GAMING 3', 'motherboard1', '• Supports 9th and 8th Gen Intel® Core™ Processors \\n• Dual Channel Non-ECC Unbuffered DDR4 \\n• New Hybrid Digital PWM Design \\n• Intel® CNVi 802.11ac Wave2 2T2R WIFI Upgradable \\n• High Quality Audio Capacitors and Audio Noise Guard with LED Trace Path Lighting \\n• Dual Ultra-Fast M.2 with PCIe Gen3 X4/X2 & SATA interface \\n• RGB FUSION 2.0 with Digital LED Light Show design \\n• Intel® Native USB 3.1 Gen2 USB Type-A \\n• Intel® GbE LAN with cFosSpeed Internet Accelerator Software \\n• CEC 2019 Ready, Save the Power as Easy as One Click \\n• Smart Fan 5 features Multiple Temperature Sensors and Hybrid Fan Headers with FAN STOP \\n• Anti-Sulfur Resistors Design \\n• Ultra DurableTM 25KV ESD and 15KV Surge LAN Protection \\n• Intel® Optane™ Memory Ready', 899, 'motherboard', 729, '2021-03-16 00:00:00', 'S', 'N'),
+(2, 'PROCESSADOR INTEL I9 9900K 9ª GERAÇÃO', 'PROCESSOR INTEL I9 9900K 9ª GEN', 'processor1', '', 3099.9, 'processor', 2799, '2021-03-16 00:00:00', 'S', 'N'),
+(3, 'XPG SPECTRIX D60G RGB (2x8GB) 3200MHZ', 'XPG SPECTRIX D60G RGB (2x8GB) 3200MHZ', 'memory1', '', 899, 'memory', 749, '2021-03-16 00:00:00', 'S', 'N'),
+(4, 'EVGA NVIDIA GEFORCE RTX 3080', 'EVGA NVIDIA GEFORCE RTX 3080', 'gpu1', '', 12499.9, 'gpu', 10499.9, '2021-03-09 00:00:00', 'S', 'N'),
+(5, 'HEADSET GAMER RAZER BLACK SHARK V2 PRO', 'HEADSET GAMER RAZER BLACK SHARK V2 PRO', 'headset1', '• Drivers de 50 mm Razer™ TriForce de Titânio para o máximo desempenho de áudio \\n• Microfone cardioide Razer™ HyperClear com placa de som USB para uma melhor captação de voz e controles avançados do microfone \\n• Cancelamento passivo de ruídos avançado para uma concentração ininterrupta \\n• Almofadas auriculares em espuma viscoelástica FlowKnit para um conforto premium \\n• THX Spatial Audio para uma precisão espacial extrema, oferecendo uma maior imersão e vantagem competitiva', 799.9, 'headset', 0, NULL, 'N', 'S'),
+(6, 'MOUSE DEATHADDER V2 CHROMA', 'MOUSE DEATHADDER V2 CHROMA OPTIC SWITCH', 'mouse1', '• Ergonomia de ponta\r\n\\n• Switches ópticos de mouse Razer\r\n\\n• Sensor óptico Razer Focus+\r\n\\n• Cabo Razer Speedflex\r\n\\n• Memória integrada avançada', 599, 'mouse', 0, NULL, 'N', 'S'),
+(7, 'GABINETE NOX PAX - ATX USB3.0', 'NOX PAX CASE - ATX USB3.0', 'case1', '', 299, 'case', 199, '2021-03-25 15:56:10', 'S', 'N'),
+(8, 'GABINETE HUSKY FROST - MID TOWER', 'HUSKY FROST CASE - MID TOWER', 'case2', '', 659, 'case', 549, '2021-03-23 16:18:03', 'S', 'N'),
+(9, 'TECLADO RAZER ORNATA V2 CHROMA MECHA-MEMBRANE', 'KEYBOARD RAZER ORNATA V2 CHROMA MECHA-MEMBRANE', 'keyboard1', '', 659, 'keyboard', 0, NULL, 'N', 'S');
 
 -- --------------------------------------------------------
 
@@ -175,7 +178,8 @@ ALTER TABLE `tech_categories`
 -- Índices para tabela `tech_produtos`
 --
 ALTER TABLE `tech_produtos`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `img_link` (`img_link`);
 
 --
 -- Índices para tabela `tech_states`
@@ -206,7 +210,7 @@ ALTER TABLE `tech_categories`
 -- AUTO_INCREMENT de tabela `tech_produtos`
 --
 ALTER TABLE `tech_produtos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `tech_states`
