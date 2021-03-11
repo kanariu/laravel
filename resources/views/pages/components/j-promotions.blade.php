@@ -9,7 +9,7 @@
         @foreach ($promotions as $promotion)
           <div class="col-md-4 d-flex align-items-stretch">
             <div class="card d-flex mt-3">
-                <img class="card-img-top img-fluid p-3" src="{{ $promotion->img_link }}" alt="Card image cap">
+                <img class="card-img-top img-fluid p-3" src="{{ asset('products/' . $promotion->img_link . '.png') }}" alt="Card image cap">
                 <div class="card-body">
                   <div>
                     @if ($locale == 'en')

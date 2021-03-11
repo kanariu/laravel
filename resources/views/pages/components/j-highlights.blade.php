@@ -7,9 +7,9 @@
     <hr class="mb-4 mt-0">
     <div class="row d-flex align-items-stretch">
         @foreach ($highlights as $highlight)
-          <div class="col-md-4">
+          <div class="col-md-4 align-items-stretch">
             <div class="card d-flex mt-3">
-                <img class="card-img-top img-fluid p-3" src="{{ $highlight->img_link }}" alt="Card image cap">
+                <img class="card-img-top img-fluid p-3" src="{{ asset('products/' . $highlight->img_link . '.png') }}" alt="Card image cap">
                 <div class="card-body">
                     <div>
                         @if ($locale == 'en')
