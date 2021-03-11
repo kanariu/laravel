@@ -24,6 +24,9 @@ return [
     'contact' => 'Contact',
     'add-cart' => 'Add to Cart',
     'promotion-expire' => 'PROMOTION EXPIRES IN:',
+    'highlight-item' => 'THIS IS A HIGHLIGHT',
+    'item' => 'ITEM',
+    'expired' => 'EXPIRED',
 
     'name' => 'Name',
     'birthdate' => 'Birthdate',

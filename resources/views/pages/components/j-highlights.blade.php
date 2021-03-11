@@ -24,7 +24,7 @@
                     <p class="h2 text-success">@lang('words.coin') {{ number_format($highlight->price, 2) }}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-warning btn-block">@lang('words.checknow')</a>
+                    <a href="{{ route('product-item', [ 'id' => $highlight->id ]) }}" class="btn btn-warning btn-block">@lang('words.checknow')</a>
                 </div>
               </div>
           </div>

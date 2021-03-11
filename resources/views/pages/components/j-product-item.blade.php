@@ -19,21 +19,47 @@
                 <div class="card-title">
                     <div class="row m-0 p-3">
                         <div class="col-md-3">
-                            <i class="fas fa-clock fa-7x text-warning"></i>
+                            @if ($product->promotion == 'S')
+                                @if (date($today) >= date($product->expire_promotion))
+                                    <i class="fas fa-clock fa-7x text-danger"></i> 
+                                @else
+                                    <i class="fas fa-clock fa-7x text-warning"></i>
+                                @endif
+                            @else
+                                <i class="fas fa-star fa-7x text-primary"></i>
+                            @endif
                         </div>
                         <div class="col d-flex flex-column align-items-center">
-                            <span class="text-white">@lang('words.promotion-expire')</span>
-                            <div id="timer">
-                                <div id="text-success" class="countdown"></div>
-                            </div>
+                            @if ($product->promotion == 'S')
+                                <span class="text-white">@lang('words.promotion-expire')</span>
+                                @if (date($today) >= date($product->expire_promotion))
+                                    <span class="h2 text-danger">@lang('words.expired')</span>
+                                @else
+                                    <div id="timer">
+                                        <div id="text-success" class="countdown"></div>
+                                    </div>
+                                @endif
+                            @else
+                                <span class="text-white">@lang('words.highlight-item')</span>
+                                <span class="display-4 text-primary">@lang('words.item')</span>
+                            @endif
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row m-0 p-3">
                         <div class="col d-flex flex-column">
-                            <span class="text-warning">@lang('words.from') @lang('words.coin') {{ number_format($product->price,2) }} @lang('words.to')</span>
-                            <span class="display-4 text-success">@lang('words.coin') {{ number_format($product->promotion_price,2) }}</span>
+                            @if ($product->promotion == 'S')
+                                @if (date($today) >= date($product->expire_promotion))
+                                    <del><span class="h1 text-success">@lang('words.coin') {{ number_format($product->promotion_price,2) }}</span></del>
+                                    <span class="display-4 text-primary">@lang('words.coin') {{ number_format($product->price,2) }}</span>
+                                @else
+                                    <span class="text-warning">@lang('words.from') @lang('words.coin') {{ number_format($product->price,2) }} @lang('words.to')</span>
+                                    <span class="display-4 text-success">@lang('words.coin') {{ number_format($product->promotion_price,2) }}</span>
+                                @endif
+                            @else
+                                <span class="display-4 text-success">@lang('words.coin') {{ number_format($product->price,2) }}</span>
+                            @endif
                         </div>
                     </div>
                     <div class="row m-0 p-3">
