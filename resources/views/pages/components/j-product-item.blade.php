@@ -40,8 +40,10 @@
                                     </div>
                                 @endif
                             @else
-                                <span class="text-white">@lang('words.highlight-item')</span>
-                                <span class="display-4 text-primary">@lang('words.item')</span>
+                                @if ($product->highlight == 'S')
+                                    <span class="text-white">@lang('words.highlight-item')</span>
+                                    <span class="display-4 text-primary">@lang('words.item')</span>
+                                @endif
                             @endif
                         </div>
                     </div>
